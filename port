@@ -1,0 +1,5 @@
+#Path to the Arduino you want to use:
+/dev/ttyACM0
+
+#Desired baud rate:
+9600
