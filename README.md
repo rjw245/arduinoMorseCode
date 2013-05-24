@@ -12,7 +12,7 @@ python main.py 'Arduino'
 
 "morse.py" uses the serialcom.py library to emulate morse code on the Arduino.
 
-"pythonMorseCode.ino" is the code that runs on the Arduino. The LED pin is 7 by default, but can be changed easily at the top of the code.
+"arduinoMorseCode.ino" is the code that runs on the Arduino. The LED pin is 7 by default, but can be changed easily at the top of the code.
 
 NOTE:
 This code has only been tested on an Ubuntu 12.04 Linux install. I have reason to believe this will not work properly on a Windows machine as serial ports work differently on that OS.
