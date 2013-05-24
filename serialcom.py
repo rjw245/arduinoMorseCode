@@ -3,7 +3,7 @@ import serial
 class Arduino:
 	def __init__(self):
 		#Load from settings file
-		settings = open('port')
+		settings = open('settings')
 		settingsLines = settings.readlines()
 		self.port = settingsLines[1].strip()
 		self.baud = settingsLines[4].strip()
