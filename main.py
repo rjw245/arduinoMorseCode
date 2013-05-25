@@ -2,8 +2,7 @@ import morse
 import serialcom
 import time
 import sys
-
-import sys, traceback
+import traceback
 
 def main():
 	try:
