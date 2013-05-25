@@ -3,7 +3,8 @@ import time
 
 
 class MorseCode:
-	code = {'a':".-",
+	code = {
+		'a':".-",
 		'b':"-...",
 		'c':"-.-.",
 		'd':"-..",
@@ -38,7 +39,8 @@ class MorseCode:
 		'7':"--...",
 		'8':"---..",
 		'9':"----.",
-		'0':"-----"}
+		'0':"-----"
+		}
 
 	def __init__(self,arduino,speed=.15):
 		self.arduino = arduino
