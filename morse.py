@@ -40,7 +40,7 @@ class MorseCode:
 		'8':"---..",
 		'9':"----.",
 		'0':"-----"
-		}
+	}
 
 	def __init__(self,arduino,speed=.15):
 		self.arduino = arduino
