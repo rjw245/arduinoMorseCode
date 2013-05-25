@@ -8,11 +8,11 @@ import sys, traceback
 def main():
 	try:
 		print "Readying arduino..."
-		arduino = serialcom.Arduino()
-		while not arduino.isReady():
+		myArduino = serialcom.Arduino()
+		while not myArduino.isReady():
 			pass #Spin while arduino not ready
 
-		morseGen = morse.MorseCode(arduino,.15)
+		morseGen = morse.MorseCode(myArduino,.15)
 
 		while 1:
 			string = raw_input("Enter text: ")
