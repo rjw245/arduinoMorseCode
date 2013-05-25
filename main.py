@@ -12,7 +12,7 @@ def main():
 		while not arduino.isReady():
 			pass #Spin while arduino not ready
 
-		morseGen = morse.MorseCode(arduino)
+		morseGen = morse.MorseCode(arduino,.15)
 
 		while 1:
 			string = raw_input("Enter text: ")

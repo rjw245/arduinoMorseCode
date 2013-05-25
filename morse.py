@@ -3,7 +3,6 @@ import time
 
 
 class MorseCode:
-	TIMEUNIT = .15 #seconds
 	code = {'a':".-",
 				'b':"-...",
 				'c':"-.-.",
@@ -41,8 +40,12 @@ class MorseCode:
 				'9':"----.",
 				'0':"-----"}
 
-	def __init__(self,arduino):
+	def __init__(self,arduino,speed=.15):
 		self.arduino = arduino
+		self.TIMEUNIT=speed
+
+	def changeSpeed(self,speed):
+		self.TIMEUNIT=speed
 
 	def pause(self,numUnits=1):
 		time.sleep(self.TIMEUNIT * numUnits)
