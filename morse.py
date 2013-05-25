@@ -90,3 +90,17 @@ class MorseCode:
 				self.pause(7)
 			c=c+1
 
+	def printMorse(self,string):
+		string = string.lower()
+		chars = list(string)
+		morseString = ""
+		for c in chars:
+			if c in self.code:
+				morseString = morseString + self.code[c] + " "
+			elif c==" ":
+				morseString = morseString + "   "
+			else:
+				morseString = morseString + c + " "
+		return morseString
+
+
