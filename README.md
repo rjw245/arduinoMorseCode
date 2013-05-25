@@ -9,7 +9,7 @@ Python interfaced with Arduino serial to allow Python to light LED to speak in m
 
 "serialcom.py" contains the necessary functionality to send serial commands to the Arduino to turn its LED on and off.
 
-"morse.py" uses the serialcom.py library to emulate morse code on the Arduino.
+"morse.py" uses the serialcom.py library to bleep morse code on the Arduino.
 
 "arduinoMorseCode.ino" is the code that runs on the Arduino. The LED pin is 7 by default, but can be changed easily at the top of the code.
 
