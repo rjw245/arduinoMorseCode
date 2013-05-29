@@ -1,14 +1,12 @@
 import serial
+#Must be running the .ino in this package for
+#Arduino to function.
 
 class Arduino:
-	def __init__(self):
-		#Load from settings file
-		settings = open('settings')
-		settingsLines = settings.readlines()
-		self.port = settingsLines[1].strip()
-		self.baud = settingsLines[4].strip()
-
+	def __init__(self,port,baud=9600):
 		#Open serial
+		self.port = port
+		self.baud = baud
 		self.ser = serial.Serial(self.port,self.baud)
 		self.ser.open()
 
