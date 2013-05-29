@@ -3,7 +3,7 @@ import serial
 #Arduino to function.
 
 class Arduino:
-	def __init__(self,port,baud=9600):
+	def __init__(self,port='/dev/ttyUSB0',baud=9600):
 		#Open serial
 		self.port = port
 		self.baud = baud
