@@ -49,6 +49,9 @@ class MorseCode:
 	def changeSpeed(self,speed):
 		self.TIMEUNIT=speed
 
+	def changeArduino(self,arduino):
+		self.arduino=arduino
+
 	def pause(self,numUnits=1):
 		time.sleep(self.TIMEUNIT * numUnits)
 
