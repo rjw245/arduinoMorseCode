@@ -16,5 +16,11 @@ class Arduino:
 	def turnOff(self):
 		self.ser.write('0')
 
-	def isReady(self):
-		return self.ser.read()
+	#Asks for ready signal, delays until received
+	def init(self):
+		self.ser.write('r')
+		while not self.ser.read():
+			pass
+
+	def __del__(self):
+		self.ser.close()
