@@ -33,6 +33,3 @@ class Arduino:
 			lastChar = self.ser.read()
 		if not lastChar:
 			raise ArduinoError("Arduino timed out.")
-
-	def __del__(self):
-		self.ser.close()
