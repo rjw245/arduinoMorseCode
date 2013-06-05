@@ -4,8 +4,6 @@ void setup()
 {
   Serial.begin(9600);
   pinMode(led,OUTPUT);
-  //Send ready signal
-  Serial.write('1');
 }
 
 void loop()
@@ -19,6 +17,12 @@ void loop()
     else if(c=='0')
     {
       digitalWrite(led,LOW);
+    }
+    
+    //Asking if ready
+    else if(c=='r')
+    {
+      Serial.write('1');
     }
   }
 }

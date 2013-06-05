@@ -13,8 +13,7 @@ try:
 
 	print "Readying arduino..."
 	myArduino = serialcom.Arduino(port,baud)
-	while not myArduino.isReady():
-		pass #Spin while arduino not ready
+	myArduino.init() #Delays until ready
 
 	morseGen = morse.MorseCode(myArduino,.15)
 
