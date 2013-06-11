@@ -27,9 +27,9 @@ class Arduino:
 	def init(self):
 		self.ser.write('r')
 		lastChar = self.ser.read()
-		end_time = time.time() + 2
+		end_time = time.time() + 4
 		while (not lastChar) and time.time() < end_time:
-			self.ser.write('r')
+			self.ser.write('r\n')
 			lastChar = self.ser.read()
 		if not lastChar:
 			raise ArduinoError("Arduino timed out.")
