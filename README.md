@@ -7,7 +7,7 @@ Python interfaced with Arduino serial to allow Python to light LED to speak in m
 
 "main.py" is the Python script you'll run to execute the program. Will ready the arduino and then prompt the user for input. Prints the corresponding morse code to the terminal at the same time that it bleeps the code on the arduino.
 
-"serialcom.py" contains the necessary functionality to send serial commands to the Arduino to turn its LED on and off.
+"serialcom.py" contains the necessary functionality to send serial commands to the Arduino.
 
 "morse.py" uses the serialcom.py library to bleep morse code on the Arduino.
 

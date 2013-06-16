@@ -56,14 +56,14 @@ class MorseCode:
 		time.sleep(self.TIMEUNIT * numUnits)
 
 	def dot(self):
-		self.arduino.turnOn()
+		self.arduino.write('1')
 		self.pause()
-		self.arduino.turnOff()
+		self.arduino.write('0')
 
 	def dash(self):
-		self.arduino.turnOn()
+		self.arduino.write('1')
 		self.pause(3)
-		self.arduino.turnOff()
+		self.arduino.write('0')
 
 	def writeLetter(self,char):
 		char = char.lower()
@@ -83,7 +83,8 @@ class MorseCode:
 		letters = list(word)
 		c=0
 		for letter in letters:
-			if letter.lower() in self.code: #Gets rid of chars without morse translation
+			#~ Gets rid of chars without morse translation:
+			if letter.lower() in self.code:
 				self.writeLetter(letter)
 				if c < len(letters)-1:
 					self.pause(3)

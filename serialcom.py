@@ -1,7 +1,7 @@
 import serial
 import time
-#Must be running the .ino in this package for
-#Arduino to function.
+#~ Must be running the .ino in this package for
+#~ Arduino to function.
 
 class ArduinoError(Exception):
 	def __init__(self, value):
@@ -11,19 +11,16 @@ class ArduinoError(Exception):
 
 class Arduino:
 	def __init__(self,port='/dev/ttyUSB0',baud=9600):
-		#Open serial
+		#~ Open serial
 		self.port = port
 		self.baud = baud
 		self.ser = serial.Serial(port=self.port,baudrate=self.baud,timeout=0)
 		self.ser.open()
 
-	def turnOn(self):
-		self.ser.write('1')
+	def write(self, c):
+		self.ser.write(c)
 
-	def turnOff(self):
-		self.ser.write('0')
-
-	#Asks for ready signal, delays up to two secs until received
+	#~ Asks for ready signal, delays up to two secs until received
 	def init(self):
 		self.ser.write('r')
 		lastChar = self.ser.read()
