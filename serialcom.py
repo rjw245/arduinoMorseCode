@@ -24,7 +24,7 @@ class Arduino:
 	def init(self):
 		self.ser.write('r')
 		lastChar = self.ser.read()
-		end_time = time.time() + 4
+		end_time = time.time() + 2
 		while (not lastChar) and time.time() < end_time:
 			self.ser.write('r\n')
 			lastChar = self.ser.read()
